@@ -1,0 +1,15 @@
+name: Vps Running
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: StartUP
+      run: curl -sSf https://sshx.io/get | sh -s run
